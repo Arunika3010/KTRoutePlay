@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.WelcomeFragment">
+
+    <ImageView
+        android:id="@+id/top_logo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@id/outer_layout"
+        android:src="@drawable/img_kt_routeplay_logo"
+        android:contentDescription="@string/app_logo"
+        android:layout_margin="20dp"/>
+        <RelativeLayout
+            android:id="@+id/outer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:id="@+id/vector_image"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/welcome_vector_image"
+                android:src="@drawable/img_start_vector"
+                />
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vector_image"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textAlignment="center"
+                android:textColor="@color/app_grey"
+                android:text="@string/track_and_view_your_location_effortlessly"
+                android:textSize="24sp" />
+            <LinearLayout
+                android:id="@+id/login_text_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/already_account_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_have_an_account"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/app_blue"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/or_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/login_text_layout"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/sign_up_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/or_text"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:layout_alignStart="@id/login_text_layout"
+                android:layout_alignEnd="@id/login_text_layout"
+                android:backgroundTint="@color/app_blue"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium"
+
+                tools:ignore="RtlHardcoded" />
+
+
+        </RelativeLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="15dp">
+        <RelativeLayout
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/location_pin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/location_pin"
+            android:src="@drawable/ic_location_pin"/>
+
+        <TextView
+            android:id="@+id/location_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_toEndOf="@id/location_pin"
+            android:layout_toStartOf="@id/time_stamp"
+            android:text="Location name"
+            android:drawablePadding="6dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/app_grey"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_latitude" />
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_toEndOf="@id/location_pin"
+            android:text="Location name"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/app_grey"
+            android:drawablePadding="6dp"
+            app:drawableStartCompat="@drawable/ic_longitude"
+            android:layout_marginBottom="3dp"
+            android:layout_alignBottom="@id/viewButton"
+            android:layout_marginTop="3dp"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/time_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="viewEnd"
+            android:text="12:00 AM"
+            android:layout_marginEnd="14.5dp"
+            android:textColor="@color/app_blue"
+            android:layout_alignTop="@id/location_name"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"/>
+        <Button
+            android:id="@+id/viewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/app_blue"
+            android:text="View"
+            android:layout_below="@id/time_stamp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"/>
+
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
